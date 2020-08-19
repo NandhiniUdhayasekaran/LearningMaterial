@@ -1,0 +1,45 @@
+@import '../sass/mixins';
+@import '../sass/variable';
+@import '../sass/extends';
+@import '../sass/functions';
+@import '../sass/maps';
+@import '../sass/nesting';
+@import '../sass/interpolation';
+body {
+    background: $primary-color;
+    color: $text-color;
+}
+
+.main {
+    width: 80%;
+    #{&}_p {
+        font-weight: map-get($font-weights, "bold");
+        &:hover {
+            color: rgb(167, 45, 66);
+        }
+    }
+}
+
+.divAlign {
+    margin: 10, auto;
+    table {
+        margin-left: 20%;
+    }
+}
+
+//Local Variable
+.ul {
+    $text-size: 15px;
+}
+
+//Variable Shadowing
+.main_p {
+    $primary-color: rgb(66, 43, 43) !global;
+}
+
+ul {
+    background-color: $primary-color;
+    li {
+        @include horizontal-list;
+    }
+}

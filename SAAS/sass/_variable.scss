@@ -1,0 +1,14 @@
+//Global Variable
+$primary-color: rgb(14, 91, 136);
+$secondary-color: rgba($primary-color, 0.88);
+$text-color: rgb(247, 243, 243);
+$font-weights: ( "regular": 400, "medium": 500, "bold": 700, );
+$dark-theme:true !default;
+//Default variable
+$blue: #000 !default;
+$box-shadow: 0 0.5rem 1rem rgba($blue, 0.15) !default;
+//Flow Control
+@if $dark-theme {
+    $blue: darken($blue, 60%);
+    $accent-color: lighten($primary-color, 60%);
+}

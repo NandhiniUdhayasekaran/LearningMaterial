@@ -1,0 +1,89 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+    li {
+        display: inline-block;
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+    }
+}
+
+//Mixin with argumennts
+@mixin grid($flex) {
+    @if $flex {
+        @include flex;
+    }
+    @else {
+        display: block;
+    }
+}
+
+@mixin padding($values) {
+    @each $var in $values {
+        padding: #{$var};
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@mixin mobile {
+    @media only screen and (max-width: 600px) {
+        .p {
+            font-size: 12px;
+        }
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@mixin tablet {
+    @media only screen and (min-width: 600px) {
+        .p {
+            font-size: 14px;
+        }
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@mixin laptop {
+    @media only screen and (min-width: 768px) {
+        .p {
+            font-size: 16px;
+        }
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@mixin sMonitor {
+    @media only screen and (min-width: 992px) {
+        .example {
+            font-size: 18px;
+        }
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@mixin lMonitor {
+    @media only screen and (min-width: 1200px) {
+        .example {
+            font-size: 20px;
+        }
+    }
+}

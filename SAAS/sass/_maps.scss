@@ -1,0 +1,44 @@
+@use "sass:map";
+$theme-colors: ( "success": #28a745, "info": #17a2b8, "warning": #ffc107, );
+$colors: ( light: #ccc, dark: #000);
+$brand-colors: ( main: red, alternative: blue);
+//map.get
+.alert {
+    background-color: map-get($theme-colors, "warning");
+}
+
+//map.megre
+$merged: map-merge($colors, $brand-colors);
+.element {
+    content: map-get($merged, alternative);
+}
+
+//map.has-key
+$layer: ( offcanvas: 1, lightbox: 500, dropdown: 10, tooltip: 15);
+// _m-lightboxes.scss
+@function layer($name) {
+    @if map-has-key($layer, $name) {
+        @return map-get($layer, $name);
+    }
+    @warn "The key #{$name} is not in the map ’$layer’";
+    @return null;
+}
+
+;
+.m-lightbox {
+    z-index: layer(lightbox);
+}
+
+
+/* For each key in the map, created an own class */
+
+$sizes: 40px,
+50px,
+80px;
+@each $size in $sizes {
+    .icon-#{$size} {
+        font-size: $size;
+        height: $size;
+        width: $size;
+    }
+}

@@ -1,0 +1,10 @@
+@mixin interpolation($changeable, $val, $val2, $prop1, $prop2) {
+    background-#{$changeable}: $val;
+    position: $val2;
+    #{$prop1}: 0px;
+    #{$prop2}: 0px;
+}
+
+.anotherbloakarea {
+    @include interpolation("color", lightgray, absolute, top, left);
+}
