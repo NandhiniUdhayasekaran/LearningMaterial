@@ -14,21 +14,18 @@ $merged: map-merge($colors, $brand-colors);
 }
 
 //map.has-key
-$layer: ( offcanvas: 1, lightbox: 500, dropdown: 10, tooltip: 15);
-// _m-lightboxes.scss
-@function layer($name) {
-    @if map-has-key($layer, $name) {
-        @return map-get($layer, $name);
-    }
-    @warn "The key #{$name} is not in the map ’$layer’";
-    @return null;
-}
-
+@debug map-has-key($colors, "light"); // true
+@debug map-has-key($colors, "medium"); // false
 ;
 .m-lightbox {
     z-index: layer(lightbox);
 }
 
+//map.has
+@debug map-has($colors);
+//map.merge
+@debug map-merge($colors, $brand-colors);
+@debug map-merge($colors, ("purple": purple));
 
 /* For each key in the map, created an own class */
 

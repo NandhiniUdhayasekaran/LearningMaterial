@@ -42,7 +42,7 @@
 }
 
 .m-lightbox {
-  z-index: 500;
+  z-index: layer(lightbox);
 }
 
 /* For each key in the map, created an own class */
