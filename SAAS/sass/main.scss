@@ -5,8 +5,12 @@
 @import '../sass/maps';
 @import '../sass/nesting';
 @import '../sass/interpolation';
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
 body {
-    background: $primary-color;
+    background: white;
     color: $text-color;
 }
 
@@ -34,12 +38,38 @@ body {
 
 //Variable Shadowing
 .main_p {
-    $primary-color: rgb(66, 43, 43) !global;
+    $primary-color: rgb(196, 141, 141) !global;
 }
 
 ul {
     background-color: $primary-color;
     li {
         @include horizontal-list;
+    }
+}
+
+h1 {
+    font-weight: map-get($font-weights, "medium");
+    background-color: $secondary-color;
+}
+
+.div- {
+    &twelve {
+        background-color: $div-twelve;
+    }
+    &six {
+        background-color: $div-six;
+    }
+    &four {
+        background-color: $div-four;
+    }
+    &three {
+        background-color: $div-three;
+    }
+    &two {
+        background-color: $div-two;
+    }
+    &one {
+        background-color: $div-one;
     }
 }

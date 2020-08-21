@@ -1,14 +1,20 @@
 //Global Variable
-$primary-color: rgb(14, 91, 136);
+$primary-color: #acc7d6;
 $secondary-color: rgba($primary-color, 0.88);
-$text-color: rgb(247, 243, 243);
+$text-color: rgb(15, 14, 14);
 $font-weights: ( "regular": 400, "medium": 500, "bold": 700, );
 $dark-theme:true !default;
+$div-twelve: rgb(170, 41, 41);
+$div-six: rgb(211, 191, 81);
+$div-four: rgb(78, 179, 19);
+$div-three: rgb(73, 206, 184);
+$div-two: rgb(11, 84, 145);
+$div-one: rgb(105, 40, 51);
 //Default variable
 $blue: #000 !default;
 $box-shadow: 0 0.5rem 1rem rgba($blue, 0.15) !default;
 //Flow Control
 @if $dark-theme {
     $blue: darken($blue, 60%);
-    $accent-color: lighten($primary-color, 60%);
+    $accent-color: lighten($primary-color, 20%);
 }

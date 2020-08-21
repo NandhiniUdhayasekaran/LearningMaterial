@@ -86,9 +86,14 @@ ul li a {
   left: 0px;
 }
 
+.selector-for-some-widget {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
 body {
-  background: #036;
-  color: #f7f3f3;
+  background: white;
+  color: #0f0e0e;
 }
 
 .main {
@@ -112,7 +117,7 @@ body {
 }
 
 ul {
-  background-color: #422b2b;
+  background-color: #c48d8d;
 }
 
 ul li {
@@ -125,5 +130,34 @@ ul li li {
   display: inline-block;
   margin-left: -2px;
   margin-right: 2em;
+}
+
+h1 {
+  font-weight: 500;
+  background-color: rgba(172, 199, 214, 0.88);
+}
+
+.div-twelve {
+  background-color: #aa2929;
+}
+
+.div-six {
+  background-color: #d3bf51;
+}
+
+.div-four {
+  background-color: #4eb313;
+}
+
+.div-three {
+  background-color: #49ceb8;
+}
+
+.div-two {
+  background-color: #0b5491;
+}
+
+.div-one {
+  background-color: #692833;
 }
 /*# sourceMappingURL=main.css.map */
