@@ -1,0 +1,1 @@
+When [FromBody] is applied to a complex type parameter, any binding source attributes applied to its properties are ignored. For example, the following Create action specifies that its pet parameter is populated from the body
